@@ -2,7 +2,6 @@ name: nmap
 version: 7.12SVN-0.4
 summary: Network mapping tool.
 description: Network mapping tool.
-architectures: [amd64, armhf]
 
 apps:
     nmap:
