@@ -1,0 +1,19 @@
+name: nmap
+version: 7.12SVN-0.4
+summary: Network mapping tool.
+description: Network mapping tool.
+
+apps:
+    nmap:
+        command: bin/nmap
+        plugs: [network, network-bind]
+    ncat:
+        command: bin/ncat
+        plugs: [network, network-bind]
+    nping:
+        command: bin/nping
+        plugs: [network, network-bind]
+parts:
+    nmap:
+        plugin: autotools
+        source: git://github.com/nmap/nmap
