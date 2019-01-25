@@ -1,7 +1,6 @@
 name: nmap
 base: core18
-version: master
-version-script: git -C parts/nmap/src/ describe --tags
+version: "7.70"
 summary: A free and open source utility for network discovery and security auditing
 description: |
   Nmap is a utility for network exploration or security auditing. It
@@ -38,11 +37,6 @@ apps:
 parts:
     nmap:
         plugin: autotools
-        source: https://github.com/nmap/nmap
-        source-type: git
-        source-branch: master
-        override-pull: |
-          snapcraftctl pull
-          git -C $SNAPCRAFT_PART_SRC tag 7.70 cadb662  # the github mirror has no tags or branches :(
+        source: https://nmap.org/dist/nmap-7.70.tar.bz2
         build-packages: [liblinear-dev, liblua5.3-dev, libpcap0.8-dev, libpcre3-dev, libssh2-1-dev, libssl-dev, lua-lpeg-dev]
         stage-packages: [liblinear3, liblua5.3-0, libpcap0.8, libpcre3, libssh2-1, libssl1.1, lua-lpeg]
