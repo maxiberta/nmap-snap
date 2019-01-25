@@ -18,7 +18,7 @@ description: |
   sudo snap connect nmap:network-control
   ```
 
-grade: devel
+grade: stable
 confinement: strict
 license: GPL-2.0
 icon: meta/gui/icon.png
