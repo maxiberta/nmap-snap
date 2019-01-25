@@ -11,8 +11,7 @@ description: |
   fingerprinting (remote host OS or device identification). Nmap also
   offers flexible target and port specification, decoy/stealth scanning,
   sunRPC scanning, and more. Most Unix and Windows platforms are
-  supported in both GUI and commandline modes. Several popular handheld
-  devices are also supported, including the Sharp Zaurus and the iPAQ.
+  supported in both GUI and commandline modes.
 
   Once installed, this snap needs manually connecting to some plugs:
   ```
