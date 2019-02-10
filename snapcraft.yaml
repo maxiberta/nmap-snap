@@ -25,20 +25,22 @@ icon: meta/gui/icon.png
 
 apps:
     nmap:
-        command: bin/nmap
+        command: nmap
         environment:
             LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas"
         plugs: [network, network-bind, network-control]
     ncat:
-        command: bin/ncat
+        command: ncat
         plugs: [network, network-bind, network-control]
     nping:
-        command: bin/nping
+        command: nping
         plugs: [network, network-bind, network-control]
 
 parts:
     nmap:
         plugin: autotools
+        configflags: [--prefix=$SNAPCRAFT_PART_INSTALL/usr]
+        install-via: "prefix"
         source: https://github.com/nmap/nmap
         source-type: git
         source-branch: master
