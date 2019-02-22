@@ -7,7 +7,9 @@
 </h1>
 
 <p align="center">
-  <b>This is the snap for <a href="https://nmap.org/download.html"><code>nmap</code> ("Network Mapper")</a></b>, <i>a free and open source (license) utility for network discovery and security auditing.</i>.
+  <b>This is the snap for <a href="https://nmap.org/download.html"><code>nmap</code></a></b>.
+  <br/>
+  Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing.
   <br/>
   It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 </p>
@@ -28,6 +30,13 @@ That'll install the latest _stable_ release of `nmap`.
 Or, if you're feeling adventurous, try the in-progress _next release_ from the `edge` channel:
 
     sudo snap install nmap --edge
+
+## Permissions
+
+Once installed, this snap needs manually connecting to some plugs:
+
+    sudo snap connect nmap:network-control
+
 
 ## The Snapcrafters
 
