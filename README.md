@@ -7,9 +7,9 @@
 </h1>
 
 <p align="center">
-  <b>This is the snap for <a href="https://nmap.org/download.html"><code>nmap</code></a></b>.
+  <b>This is the snap for <a href="https://nmap.org/"><code>nmap</code></a></b>.
   <br/>
-  Nmap ("Network Mapper") is a free and open source (license) utility for network discovery and security auditing.
+  Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing.
   <br/>
   It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 </p>
