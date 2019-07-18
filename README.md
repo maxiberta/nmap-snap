@@ -1,4 +1,5 @@
 [![nmap](https://snapcraft.io/nmap/badge.svg)](https://snapcraft.io/nmap)
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/nmap)
 
 <h1 align="center">
   <a href="https://nmap.org/">
@@ -15,11 +16,6 @@
   <br/>
   It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 </p>
-
-<p align="center">
-  <a href="https://snapcraft.io/nmap"><img alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" /></a>
-</p>
-
 
 ## Command-line Installation
 
