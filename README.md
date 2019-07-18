@@ -1,10 +1,8 @@
-<p align="right">
+<p align="center">
   <a href="https://snapcraft.io/nmap" align="right">
     <img alt="nmap" src="https://snapcraft.io/nmap/badge.svg" />
   </a>
-</p>
-
-<p align="center">
+  <br/>
   <b>This is the snap for <a href="https://nmap.org/"><code>nmap</code></a></b>.
   <br/>
   Nmap ("Network Mapper") is a free and open source utility for network discovery and security auditing.
