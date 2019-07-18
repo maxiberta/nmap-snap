@@ -14,9 +14,11 @@ description: |
   supported in both GUI and commandline modes.
 
   Once installed, this snap needs manually connecting to some plugs:
-  ```
-  sudo snap connect nmap:network-control
-  ```
+
+     sudo snap connect nmap:network-control
+
+  Main website: https://nmap.org/
+
 
 grade: devel
 confinement: strict

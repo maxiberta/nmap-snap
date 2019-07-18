@@ -1,3 +1,5 @@
+[![nmap](https://snapcraft.io/nmap/badge.svg)](https://snapcraft.io/nmap)
+
 <h1 align="center">
   <a href="https://nmap.org/">
     <img src="https://nmap.org/images/nmap-logo-256x256.png" alt="nmap">
