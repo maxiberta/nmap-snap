@@ -1,12 +1,14 @@
 <h1 align="center">
-  <a href="https://snapcraft.io/nmap">
-    <img alt="nmap" src="https://snapcraft.io/nmap/badge.svg" />
-  </a>
   <a href="https://nmap.org/">
     <img src="https://nmap.org/images/nmap-logo-256x256.png" alt="nmap">
     <br />
     Nmap snap
   </a>
+  <br/>
+  <a href="https://snapcraft.io/nmap">
+    <img alt="nmap" src="https://snapcraft.io/nmap/badge.svg" />
+  </a>
+
 </h1>
 <p align="center">
   <b>This is the snap for <a href="https://nmap.org/"><code>nmap</code></a></b>.
