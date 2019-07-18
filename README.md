@@ -1,6 +1,8 @@
-<a href="https://snapcraft.io/nmap">
-  <img alt="nmap" src="https://snapcraft.io/nmap/badge.svg" />
-</a>
+<p align="right">
+  <a href="https://snapcraft.io/nmap" align="right">
+    <img alt="nmap" src="https://snapcraft.io/nmap/badge.svg" />
+  </a>
+</p>
 
 <p align="center">
   <b>This is the snap for <a href="https://nmap.org/"><code>nmap</code></a></b>.
