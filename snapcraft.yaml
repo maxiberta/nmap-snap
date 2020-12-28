@@ -24,6 +24,7 @@ grade: devel
 confinement: strict
 license: GPL-2.0
 icon: meta/gui/icon.png
+compression: lzo
 
 apps:
     nmap:
