@@ -31,10 +31,10 @@ apps:
         command: nmap
         environment:
             LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas"
-        plugs: [network, network-bind, network-control]
+        plugs: [network, network-bind, network-control, home]
     ncat:
         command: ncat
-        plugs: [network, network-bind, network-control]
+        plugs: [network, network-bind, network-control, home]
     nping:
         command: nping
         plugs: [network, network-bind, network-control]
