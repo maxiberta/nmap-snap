@@ -23,18 +23,19 @@ grade: stable
 confinement: strict
 license: GPL-2.0
 icon: meta/gui/icon.png
+compression: lzo
 
 apps:
     nmap:
-        command: bin/nmap
+        command: nmap
         environment:
             LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas"
-        plugs: [network, network-bind, network-control]
+        plugs: [network, network-bind, network-control, home]
     ncat:
-        command: bin/ncat
-        plugs: [network, network-bind, network-control]
+        command: ncat
+        plugs: [network, network-bind, network-control, home]
     nping:
-        command: bin/nping
+        command: nping
         plugs: [network, network-bind, network-control]
 
 parts:
