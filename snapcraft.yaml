@@ -1,5 +1,5 @@
 name: nmap
-base: core18
+base: core20
 adopt-info: nmap
 summary: A free and open source utility for network discovery and security auditing
 description: |
@@ -27,22 +27,22 @@ compression: lzo
 
 apps:
     nmap:
-        command: nmap
+        command: usr/bin/nmap
         environment:
-            LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas"
+            LD_LIBRARY_PATH: $SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas
         plugs: [network, network-bind, network-control, home]
     ncat:
-        command: ncat
+        command: usr/bin/ncat
         plugs: [network, network-bind, network-control, home]
     nping:
-        command: nping
+        command: usr/bin/nping
         plugs: [network, network-bind, network-control]
 
 parts:
     nmap:
         plugin: autotools
-        configflags: [--prefix=$SNAPCRAFT_PART_INSTALL/usr]
-        install-via: "prefix"
+        autotools-configure-parameters:
+          - --prefix=/usr
         source: https://github.com/nmap/nmap
         source-type: git
         source-branch: master
