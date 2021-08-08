@@ -41,6 +41,6 @@ apps:
 parts:
     nmap:
         plugin: autotools
-        source: https://nmap.org/dist/nmap-7.91.tar.bz2
+        source: https://nmap.org/dist/nmap-7.92.tar.bz2
         build-packages: [liblinear-dev, liblua5.3-dev, libpcap0.8-dev, libpcre3-dev, libssh2-1-dev, libssl-dev, lua-lpeg-dev, zlib1g-dev]
         stage-packages: [liblinear3, liblua5.3-0, libpcap0.8, libpcre3, libssh2-1, libssl1.1, lua-lpeg, zlib1g]
