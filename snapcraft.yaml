@@ -1,6 +1,6 @@
 name: nmap
 base: core18
-version: "7.91"
+version: "7.92"
 summary: A free and open source utility for network discovery and security auditing
 description: |
   Nmap is a utility for network exploration or security auditing. It
