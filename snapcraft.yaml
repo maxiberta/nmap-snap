@@ -1,5 +1,5 @@
 name: nmap
-base: core18
+base: core22
 version: "7.92"
 summary: A free and open source utility for network discovery and security auditing
 description: |
@@ -18,7 +18,6 @@ description: |
 
   Main website: https://nmap.org/
 
-
 grade: stable
 confinement: strict
 license: GPL-2.0
@@ -27,20 +26,38 @@ compression: lzo
 
 apps:
     nmap:
-        command: nmap
+        command: usr/bin/nmap
         environment:
-            LD_LIBRARY_PATH: "$LD_LIBRARY_PATH:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/blas"
+          LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/blas
         plugs: [network, network-bind, network-control, home]
     ncat:
-        command: ncat
+        command: usr/bin/ncat
         plugs: [network, network-bind, network-control, home]
     nping:
-        command: nping
+        command: usr/bin/nping
         plugs: [network, network-bind, network-control]
 
 parts:
     nmap:
         plugin: autotools
+        autotools-configure-parameters:
+          - --prefix=/usr
         source: https://nmap.org/dist/nmap-7.92.tar.bz2
-        build-packages: [liblinear-dev, liblua5.3-dev, libpcap0.8-dev, libpcre3-dev, libssh2-1-dev, libssl-dev, lua-lpeg-dev, zlib1g-dev]
-        stage-packages: [liblinear3, liblua5.3-0, libpcap0.8, libpcre3, libssh2-1, libssl1.1, lua-lpeg, zlib1g]
+        build-packages:
+          - liblinear-dev
+          - liblua5.3-dev
+          - libpcap0.8-dev
+          - libpcre3-dev
+          - libssh2-1-dev
+          - libssl-dev
+          - lua-lpeg-dev
+          - zlib1g-dev
+        stage-packages:
+          - liblinear4
+          - liblua5.3-0
+          - libpcap0.8
+          - libpcre3
+          - libssh2-1
+          - libssl3
+          - lua-lpeg
+          - zlib1g
