@@ -24,6 +24,13 @@ license: GPL-2.0
 icon: meta/gui/icon.png
 compression: lzo
 
+slots:
+  nmap:
+    interface: content
+    source:
+      read:
+      - $SNAP/usr
+
 apps:
     nmap:
         command: usr/bin/nmap
