@@ -64,6 +64,7 @@ parts:
           - libssh2-1-dev
           - libssl-dev
           - python3-distutils
+          - python3-setuptools
           - zlib1g-dev
         stage-packages:
           - liblinear4
