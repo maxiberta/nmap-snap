@@ -55,15 +55,11 @@ parts:
         build-packages:
           - liblinear-dev
           - libpcap0.8-dev
-          - libpcre3-dev
-          - libssh2-1-dev
           - libssl-dev
           - python3-distutils
           - zlib1g-dev
         stage-packages:
           - liblinear4
           - libpcap0.8
-          - libpcre3
-          - libssh2-1
           - libssl3
           - zlib1g
