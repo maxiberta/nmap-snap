@@ -1,6 +1,6 @@
 name: nmap
 base: core22
-version: "7.94"
+version: "7.95"
 summary: A free and open source utility for network discovery and security auditing
 description: |
   Nmap is a utility for network exploration or security auditing. It
@@ -51,7 +51,7 @@ parts:
           - --prefix=/usr
           - --with-liblua=included
           - --without-zenmap
-        source: https://nmap.org/dist/nmap-7.94.tar.bz2
+        source: https://nmap.org/dist/nmap-7.95.tar.bz2
         build-packages:
           - liblinear-dev
           - libpcap0.8-dev
