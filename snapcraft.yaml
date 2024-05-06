@@ -56,7 +56,7 @@ parts:
         source-branch: master
         override-pull: |
           craftctl default
-          git -C $CRAFT_PART_SRC tag 7.94 72d67cf40188d9e0c2fe064aa3ab2e25e5cdff5a  # GitHub mirror has no tags or branches :(
+          git -C $CRAFT_PART_SRC tag 7.95 43e70c09d2b310a967fd52352db0ad5fd8877447  # GitHub mirror has no tags or branches :(
           craftctl set version=$(git describe --tags --long)
         build-packages:
           - liblinear-dev
