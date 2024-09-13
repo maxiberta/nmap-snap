@@ -67,5 +67,5 @@ parts:
         stage-packages:
           - liblinear4
           - libpcap0.8t64
-          - libssl3
+          - libssl3t64
           - zlib1g
