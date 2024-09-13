@@ -66,6 +66,6 @@ parts:
           - zlib1g-dev
         stage-packages:
           - liblinear4
-          - libpcap0.8
+          - libpcap0.8t64
           - libssl3
           - zlib1g
