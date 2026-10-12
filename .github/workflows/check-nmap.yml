@@ -1,0 +1,31 @@
+name: Check for Nmap releases
+
+on:
+  schedule:
+    - cron: "17 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check Nmap dist directory
+        run: bash ./check-nmap.sh
+
+      - name: Save updated version
+        run: |
+          if ! git diff --quiet -- nmap-version.txt; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add nmap-version.txt
+            git commit -m "Record detected Nmap version"
+            git push
+          fi
