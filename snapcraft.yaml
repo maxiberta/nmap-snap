@@ -1,5 +1,5 @@
 name: nmap
-base: core24
+base: core26
 version: "7.95"
 summary: A free and open source utility for network discovery and security auditing
 description: |
