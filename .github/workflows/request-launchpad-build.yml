@@ -19,8 +19,6 @@ jobs:
   request-launchpad-build:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      LP_CREDENTIALS_FILE: ${{ runner.temp }}/lp-shell-credentials
     steps:
       - name: Install lptools
         run: |
@@ -30,6 +28,7 @@ jobs:
       - name: Write Launchpad credentials
         env:
           LP_CREDENTIALS_B64: ${{ secrets.LP_CREDENTIALS_B64 }}
+          LP_CREDENTIALS_FILE: ${{ runner.temp }}/lp-shell-credentials
         run: |
           printf '%s' "$LP_CREDENTIALS_B64" | base64 -d > "$LP_CREDENTIALS_FILE"
           chmod 600 "$LP_CREDENTIALS_FILE"
@@ -37,5 +36,6 @@ jobs:
       - name: Request Launchpad builds
         env:
           SNAP_NAME: ${{ inputs.snap-name }}
+          LP_CREDENTIALS_FILE: ${{ runner.temp }}/lp-shell-credentials
         run: |
           /usr/bin/lp-shell production devel -c 'import os; lp.snaps.getByName(name=os.environ["SNAP_NAME"], owner=lp.me).requestBuilds(pocket="Updates", archive=lp.distributions["ubuntu"].main_archive)'
