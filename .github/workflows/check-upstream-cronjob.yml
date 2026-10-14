@@ -40,7 +40,7 @@ jobs:
             -H 'Snap-Device-Series: 16' "https://api.snapcraft.io/v2/snaps/info/${SNAP_NAME}" \
             | jq -r --arg arch "$SNAP_ARCH" --arg track "$SNAP_TRACK" --arg ch "$SNAP_CHANNEL" \
               '."channel-map"[] | select(.channel.architecture==$arch and .channel.track==$track and .channel.name==$ch) | .version' \
-            | grep -oP '(?<=-g)[0-9a-f]+' || true)
+            | grep -oP '(?<=-g)[0-9a-f]+')
           echo "snap-version=$snap_version" | tee -a "$GITHUB_OUTPUT"
 
       - name: Trigger edge build
