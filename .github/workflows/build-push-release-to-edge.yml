@@ -19,4 +19,4 @@ jobs:
     with:
       snap-name: nmap-edge
     secrets:
-      LP_CREDENTIALS_B64: ${{ secrets.LP_CREDENTIALS_EDGE_B64 }}
+      LP_CREDENTIALS_B64: ${{ secrets.LP_CREDENTIALS_B64 }}

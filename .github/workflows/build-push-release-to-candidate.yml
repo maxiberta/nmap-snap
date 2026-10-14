@@ -17,4 +17,4 @@ jobs:
     with:
       snap-name: nmap-candidate
     secrets:
-      LP_CREDENTIALS_B64: ${{ secrets.LP_CREDENTIALS_CANDIDATE_B64 }}
+      LP_CREDENTIALS_B64: ${{ secrets.LP_CREDENTIALS_B64 }}
