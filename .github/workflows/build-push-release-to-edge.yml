@@ -1,7 +1,7 @@
 name: EDGE multi-arch builds from main (unstable)
 on:
   push:
-    branches: [main]
+    branches: [master]
   workflow_dispatch:
   repository_dispatch:
     types: [trigger-edge-build-event]
