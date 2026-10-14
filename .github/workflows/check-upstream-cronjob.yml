@@ -15,8 +15,8 @@ jobs:
     permissions:
       contents: write
     env:
-      UPSTREAM_REPO: "nmap/nmap.git"
-      UPSTREAM_REF: "main"
+      UPSTREAM_REPO: "nmap/nmap"
+      UPSTREAM_REF: "master"
       SNAP_NAME: "nmap"
       SNAP_TRACK: "latest"
       SNAP_CHANNEL: "edge"
@@ -45,7 +45,5 @@ jobs:
 
       - name: Trigger edge build
         if: >-
-          github.event_name == 'workflow_dispatch' ||
-          (github.event_name == 'schedule' &&
-            !startsWith(steps.fetch-upstream.outputs.upstream-commit, steps.fetch-snap.outputs.snap-version))
+          !startsWith(steps.fetch-upstream.outputs.upstream-commit, steps.fetch-snap.outputs.snap-version)
         run: gh api -X POST "repos/${TARGET_REPO}/dispatches" -f event_type="${EVENT_TYPE}"
