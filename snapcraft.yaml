@@ -35,7 +35,7 @@ apps:
     nmap:
         command: usr/bin/nmap
         environment:
-          LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/blas
+          LD_LIBRARY_PATH: $LD_LIBRARY_PATH:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/blas
         plugs: [network, network-bind, network-control, home]
     ncat:
         command: usr/bin/ncat
@@ -56,7 +56,6 @@ parts:
         source-branch: master
         override-pull: |
           craftctl default
-          git -C $CRAFT_PART_SRC tag 7.95 43e70c09d2b310a967fd52352db0ad5fd8877447  # GitHub mirror has no tags or branches :(
           craftctl set version=$(git describe --tags --long)
         build-packages:
           - liblinear-dev
