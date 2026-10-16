@@ -51,7 +51,7 @@ parts:
           - --prefix=/usr
           - --with-liblua=included
           - --without-zenmap
-        source: https://nmap.org/dist/nmap-7.991.tar.bz2
+        source: https://nmap.org/dist/nmap-7.992.tar.bz2
         build-packages:
           - liblinear-dev
           - libpcap0.8-dev
