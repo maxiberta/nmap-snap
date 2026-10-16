@@ -58,6 +58,7 @@ parts:
           craftctl default
           craftctl set version=$(git describe --tags --long)
         build-packages:
+          - autotools-dev
           - liblinear-dev
           - libpcap0.8-dev
           - libssl-dev
@@ -68,3 +69,12 @@ parts:
           - libpcap0.8t64
           - libssl3t64
           - zlib1g
+        override-build: |
+          if [ -f /usr/share/misc/config.guess ]; then
+            find . -name config.guess -exec cp /usr/share/misc/config.guess {} \; 2>/dev/null || true
+          fi
+          if [ -f /usr/share/misc/config.sub ]; then
+            find . -name config.sub -exec cp /usr/share/misc/config.sub {} \; 2>/dev/null || true
+          fi
+          autoreconf --force --install 2>/dev/null || true
+          craftctl default
